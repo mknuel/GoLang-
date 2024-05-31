@@ -1,34 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
+
 func main() {
-
-	// arrays
-	// var ages [3]int = [3]int{1, 2, 3}
-
-	ages := [3]int{23,30,9}
-
-	var names=[3]string{"Miguel", "jamal", "Newby"}
-	fmt.Println(ages, len(ages), names)
-
+	/* greetings:="Hello! there, How are you today"
+	   greetings=strings.ReplaceAll(greetings, "Hello", "Hey")
+	   fmt.Println(strings.Contains(greetings, "Hello"))
+	   fmt.Println(strings.ToTitle(greetings))
+	   fmt.Println(strings.Index(greetings, "y"))
+	   fmt.Println("Trim space",strings.Split(strings.TrimSpace(greetings), " "))
+	   fmt.Println("Trim",strings.ReplaceAll(greetings, " ", "")) */
 
 	// slices
-	// can be manipulated
-	var scores=[]int{100,50, 60}
-	
-	scores[0]= 58
-	scores=append(scores,87)
+	ages := []int{24, 34, 3, 45, 7, 12, 90, 87, 43, 25}
+names:=[]string{"Mk", "Emmanuel", "Luigi", "Hannah", "Debra", "Kentuck"}
+	sort.Ints(ages)
 
-	scoreRange:= scores[2:3]
-rangeOne:= scores[:1]
-rangeTwo:= scores[1:]
+	sort.Strings(names)
 
-	fmt.Println(scores, len(scores), scoreRange)
-	
-	scoreRange=append(scoreRange, 48)
-	
-	fmt.Println(rangeOne,rangeTwo, scoreRange)
-	// slice ranges
+	var index = sort.SearchInts(ages, 1000)
+	fmt.Println("Ages", ages)
+	fmt.Println("Index", index)
+	fmt.Println("Names", names)
 
-}
- 
+} 

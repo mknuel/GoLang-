@@ -1,29 +1,55 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
+import "fmt"
 
 func main() {
-	/* greetings:="Hello! there, How are you today"
-	   greetings=strings.ReplaceAll(greetings, "Hello", "Hey")
-	   fmt.Println(strings.Contains(greetings, "Hello"))
-	   fmt.Println(strings.ToTitle(greetings))
-	   fmt.Println(strings.Index(greetings, "y"))
-	   fmt.Println("Trim space",strings.Split(strings.TrimSpace(greetings), " "))
-	   fmt.Println("Trim",strings.ReplaceAll(greetings, " ", "")) */
+	// for as while loop
+	/* 	x := 0
 
-	// slices
-	ages := []int{24, 34, 3, 45, 7, 12, 90, 87, 43, 25}
-names:=[]string{"Mk", "Emmanuel", "Luigi", "Hannah", "Debra", "Kentuck"}
-	sort.Ints(ages)
+	   	for x < 5 {
+	   		x++
+	   		fmt.Printf("The value of x is %d\n", x)
 
-	sort.Strings(names)
+	   	} */
 
-	var index = sort.SearchInts(ages, 1000)
-	fmt.Println("Ages", ages)
-	fmt.Println("Index", index)
-	fmt.Println("Names", names)
+	// regular for loop
+	/* 	for i:=0; i<5;i++{
+		fmt.Println("The value of i is",i)
+	} */
 
-} 
+	names := []string{"Mk", "Emmanuel", "Luigi", "Hannah", "Debra", "Kentuck"}
+
+	/* for i := 0; i < len(names); i++ {
+
+		fmt.Printf("%s is placed at index %d\n", names[i], i)
+
+		if i==len(names)-1 {
+
+			fmt.Printf("That list is %d names long", len(names))
+
+		}
+	} */
+
+	/* 
+	for y := 1; y <= 12; y++ {
+		
+		x := 0
+		fmt.Println("\nThe multiplication table for", y )
+		for x<=11{
+
+			
+			x++
+				
+			
+			fmt.Printf("%d * %d = %d\n", y,x, x*y )
+		}
+	} */
+
+/* 	for index, value := range names{
+		fmt.Printf("The Value at index %d is %s \n", index, value)
+	}
+ */
+	for _, value := range names{
+		fmt.Printf("The Value is %s \n",  value)
+	}
+}
